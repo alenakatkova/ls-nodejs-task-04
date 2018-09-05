@@ -9,6 +9,7 @@ const pug = new Pug({
   noCache: true,
   app: app
 });
+const fs = require('fs');
 
 app.use(staticDirectory('./public'));
 
@@ -19,5 +20,9 @@ app
   .use(router.allowedMethods());
 
 app.listen(3000, () => {
+  if (!fs.existsSync('./public/upload')) {
+    fs.mkdirSync('./public/upload');
+  }
+
   console.log('Server start 3000');
 });
