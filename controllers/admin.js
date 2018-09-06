@@ -45,20 +45,20 @@ module.exports.uploadGood = async (ctx, next) => {
   const { path } = ctx.request.files.photo;
   const productName = ctx.request.body.name;
   const fileName = ctx.request.files.photo.name;
-  
+
   let upload = './public/upload';
 
   // Валидация формы
-  let areFieldsValidValid = validation.validateFields(ctx.request.body);
+  let areFieldsValid = validation.validateFields(ctx.request.body);
   let isFileValid = validation.validateUpload(ctx.request.files.photo);
-  if (!areFieldsValidValid || !isFileValid) {
+  if (!areFieldsValid || !isFileValid) {
     await unlink(path);
     return ctx.render('pages/admin', {
       msgfile: 'Заполните все поля'
     });
   }
 
-  let newFilePath = _path.join(upload, ctx.request.files.photo.name);
+  let newFilePath = _path.join(upload, fileName);
 
   const errUpload = await rename(path, newFilePath);
   if (errUpload) {

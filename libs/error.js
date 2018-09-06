@@ -1,4 +1,4 @@
-module.exports = async(ctx, next) => {
+module.exports = async (ctx, next) => {
   try {
     await next();
     if (ctx.status === 404) {
