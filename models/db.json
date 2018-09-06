@@ -1,0 +1,91 @@
+{
+  "goods": [
+    {
+      "src": "./assets/img/products/Work1.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work2.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work3.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work4.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work5.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work6.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work7.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work8.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "src": "./assets/img/products/Work9.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "photo": "miami@2x.png",
+      "src": "upload/miami@2x.png",
+      "name": "Путешествие в Майями",
+      "price": "1"
+    },
+    {
+      "photo": "tokyo.png",
+      "src": "upload/tokyo.png",
+      "name": "Ужин в японском ресторане",
+      "price": "100"
+    },
+    {
+      "photo": "capetown.png",
+      "src": "upload/capetown.png",
+      "name": "Концерт на набережной",
+      "price": "10000"
+    },
+    {
+      "photo": "seoul.png",
+      "src": "upload/seoul.png",
+      "name": "Курс корейского языка",
+      "price": "300000"
+    }
+  ],
+  "skills": [
+    {
+      "number": "12",
+      "text": "Возраст начала занятий на скрипке"
+    },
+    {
+      "number": "14",
+      "text": "Концертов отыграл"
+    },
+    {
+      "number": "15",
+      "text": "Максимальное число городов в туре"
+    },
+    {
+      "number": "16",
+      "text": "Лет на сцене в качестве скрипача"
+    }
+  ]
+}
