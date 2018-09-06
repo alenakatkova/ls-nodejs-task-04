@@ -12,8 +12,18 @@ const pug = new Pug({
 const fs = require('fs');
 const session = require('koa-session');
 const config = require('./config');
+const errorHandler = require('./libs/error');
 
 app.use(staticDirectory('./public'));
+
+app.use(errorHandler);
+app.on('error', (err, ctx) => {
+  ctx.render('pages/error', {
+    message: ctx.response.message,
+    status: ctx.response.status,
+    error: ctx.response
+  });
+});
 
 const router = require('./routes');
 

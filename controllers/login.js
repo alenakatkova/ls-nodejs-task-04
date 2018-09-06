@@ -22,10 +22,10 @@ module.exports.sendLogin = async (ctx, next) => {
     return ctx.render('pages/login', { msgslogin: 'Сначала задайте пароль и почту пользователя' });
   }
 
-  if (user.email !== email || !psw.validPassword(password)) {
-    return ctx.render('pages/login', { msgslogin: 'Неправильные имя пользователя или пароль' });
-  } else {
+  if (user.email === email && psw.validPassword(password)) {
     ctx.session.isAdmin = true;
     ctx.redirect('/admin');
+  } else {
+    return ctx.render(('pages/login'), { msgslogin: 'Неправильные имя пользователя или пароль' });
   }
 };

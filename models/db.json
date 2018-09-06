@@ -50,23 +50,35 @@
       "src": "upload/miami@2x.png",
       "name": "Путешествие в Майями",
       "price": "1"
+    },
+    {
+      "photo": "tokyo.png",
+      "src": "upload/tokyo.png",
+      "name": "Ужин в японском ресторане",
+      "price": "100"
+    },
+    {
+      "photo": "capetown.png",
+      "src": "upload/capetown.png",
+      "name": "Концерт на набережной",
+      "price": "10000"
     }
   ],
   "skills": [
     {
-      "number": "45",
+      "number": "12",
       "text": "Возраст начала занятий на скрипке"
     },
     {
-      "number": "45",
+      "number": "14",
       "text": "Концертов отыграл"
     },
     {
-      "number": "45",
+      "number": "15",
       "text": "Максимальное число городов в туре"
     },
     {
-      "number": "45",
+      "number": "16",
       "text": "Лет на сцене в качестве скрипача"
     }
   ],

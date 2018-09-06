@@ -8,11 +8,7 @@ const unlink = util.promisify(fs.unlink);
 
 // Обработка GET запроса. Рендеринг страницы admin
 module.exports.getAdmin = async (ctx, next) => {
-  if (ctx.session.isAdmin) {
-    ctx.render('pages/admin');
-  } else {
-    ctx.render('pages/login');
-  }
+  ctx.render('pages/admin');
 };
 
 // Обработка POST запроса. Сохранение анкеты в БД

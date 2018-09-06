@@ -6,13 +6,20 @@ const ctrlHome = require('../controllers/index');
 const ctrlLogin = require('../controllers/login');
 const ctrlAdmin = require('../controllers/admin');
 
+const isAdmin = (ctx, next) => {
+  if (ctx.session.isAdmin) {
+    return next();
+  }
+  ctx.redirect('/login');
+};
+
 router.get('/', ctrlHome.getHome);
 router.post('/', koaBody(), ctrlHome.sendEmail);
 
 router.get('/login', ctrlLogin.getLogin);
 router.post('/login', koaBody(), ctrlLogin.sendLogin);
 
-router.get('/admin', ctrlAdmin.getAdmin);
+router.get('/admin', isAdmin, ctrlAdmin.getAdmin);
 router.post('/admin/skills', koaBody(), ctrlAdmin.sendSkills);
 router.post('/admin/upload', koaBody({
   multipart: true,
