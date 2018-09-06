@@ -10,12 +10,15 @@ const pug = new Pug({
   app: app
 });
 const fs = require('fs');
+const session = require('koa-session');
+const config = require('./config');
 
 app.use(staticDirectory('./public'));
 
 const router = require('./routes');
 
 app
+  .use(session(config.session, app))
   .use(router.routes())
   .use(router.allowedMethods());
 

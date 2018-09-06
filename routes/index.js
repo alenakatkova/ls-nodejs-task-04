@@ -8,7 +8,10 @@ const ctrlAdmin = require('../controllers/admin');
 
 router.get('/', ctrlHome.getHome);
 router.post('/', koaBody(), ctrlHome.sendEmail);
+
 router.get('/login', ctrlLogin.getLogin);
+router.post('/login', koaBody(), ctrlLogin.sendLogin);
+
 router.get('/admin', ctrlAdmin.getAdmin);
 router.post('/admin/skills', koaBody(), ctrlAdmin.sendSkills);
 router.post('/admin/upload', koaBody({
